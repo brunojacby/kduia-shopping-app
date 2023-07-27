@@ -5,15 +5,15 @@ const Location = () => {
   const {dispatch } = useContext(AppContext);
 
     const changeLocation = (val)=>{
-            dispatch({
-                type: 'CHG_LOCATION',
-                payload: val,
-            })
+      dispatch({
+          type: 'CHG_LOCATION',
+          payload: val,
+      })
     }
     
 
   return (
-        <div className='alert alert-secondary'> Location {
+    <div className='alert alert-secondary'> Location {
       <select name="Location" id="Location" onChange={event=>changeLocation(event.target.value)}>
         <option value="£">Uk(£)</option>
         <option value="₹">India(₹)</option>
